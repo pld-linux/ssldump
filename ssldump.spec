@@ -1,5 +1,5 @@
-#
 Summary:	SSLv3/TLS network protocol analyzer
+Summary(pl):	Analizator protoko³u sieciowego SSLv3/TLS
 Name:		ssldump
 Version:	0.9b3
 Release:	1
@@ -9,10 +9,11 @@ Group:		Applications/Networking
 Source0:	http://www.rtfm.com/ssldump/%{name}-%{version}.tar.gz
 # Source0-md5:	ac8c28fe87508d6bfb06344ec496b1dd
 URL:		http://www.rtfm.com/ssldump/
-BuildRequires:	automake
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libpcap-devel >= 2:0.8.3
 BuildRequires:	openssl-devel >= 0.9.7d
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,6 +24,13 @@ decodes the records and displays them in a textual form to stdout. If
 provided with the appropriate keying material, it will also decrypt
 the connections and display the application data traffic.
 
+%description -l pl
+ssldump to analizator protoko³u sieciowego SSLv3/TLS. Identyfikuje
+po³±czenia TCP na wybranym interfejsie sieciowym i próbuje
+interpretowaæ je jako ruch SSLv3/TLS. Po zidentyfikowaniu ruchu
+SSLv3/TLS dekoduje rekordy i wy¶wietla je w postaci tekstowej na
+standardowym wyj¶ciu. W przypadku wyposarzenia we w³a¶ciwe klucze
+bêdzie tak¿e dekodowa³ po³±czenia i wy¶wietla³ ruch danych aplikacji.
 
 %prep
 %setup -q
