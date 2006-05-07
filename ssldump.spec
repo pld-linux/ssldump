@@ -8,6 +8,7 @@ License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.rtfm.com/ssldump/%{name}-%{version}.tar.gz
 # Source0-md5:	ac8c28fe87508d6bfb06344ec496b1dd
+Patch0: 	%{name}-openssl.patch
 URL:		http://www.rtfm.com/ssldump/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -34,6 +35,8 @@ bêdzie tak¿e dekodowa³ po³±czenia i wy¶wietla³ ruch danych aplikacji.
 
 %prep
 %setup -q
+%patch0 -p1
+
 sed -i -e 's#libpcap.a#libpcap.so#g' configure*
 sed -i -e 's#net/bpf.h#pcap-bpf.h#g' base/pcap-snoop.c
 
