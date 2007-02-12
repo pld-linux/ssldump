@@ -1,5 +1,5 @@
 Summary:	SSLv3/TLS network protocol analyzer
-Summary(pl):	Analizator protoko≥u sieciowego SSLv3/TLS
+Summary(pl.UTF-8):   Analizator protoko≈Çu sieciowego SSLv3/TLS
 Name:		ssldump
 Version:	0.9b3
 Release:	2
@@ -25,13 +25,13 @@ decodes the records and displays them in a textual form to stdout. If
 provided with the appropriate keying material, it will also decrypt
 the connections and display the application data traffic.
 
-%description -l pl
-ssldump to analizator protoko≥u sieciowego SSLv3/TLS. Identyfikuje
-po≥±czenia TCP na wybranym interfejsie sieciowym i prÛbuje
-interpretowaÊ je jako ruch SSLv3/TLS. Po zidentyfikowaniu ruchu
-SSLv3/TLS dekoduje rekordy i wy∂wietla je w postaci tekstowej na
-standardowym wyj∂ciu. W przypadku wyposarzenia we w≥a∂ciwe klucze
-bÍdzie takøe dekodowa≥ po≥±czenia i wy∂wietla≥ ruch danych aplikacji.
+%description -l pl.UTF-8
+ssldump to analizator protoko≈Çu sieciowego SSLv3/TLS. Identyfikuje
+po≈ÇƒÖczenia TCP na wybranym interfejsie sieciowym i pr√≥buje
+interpretowaƒá je jako ruch SSLv3/TLS. Po zidentyfikowaniu ruchu
+SSLv3/TLS dekoduje rekordy i wy≈õwietla je w postaci tekstowej na
+standardowym wyj≈õciu. W przypadku wyposarzenia we w≈Ça≈õciwe klucze
+bƒôdzie tak≈ºe dekodowa≈Ç po≈ÇƒÖczenia i wy≈õwietla≈Ç ruch danych aplikacji.
 
 %prep
 %setup -q
