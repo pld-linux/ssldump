@@ -2,7 +2,7 @@ Summary:	SSLv3/TLS network protocol analyzer
 Summary(pl.UTF-8):	Analizator protokołu sieciowego SSLv3/TLS
 Name:		ssldump
 Version:	0.9b3
-Release:	3
+Release:	4
 Epoch:		0
 License:	BSD
 Group:		Applications/Networking
