@@ -5,7 +5,7 @@ Version:	0.9b3
 Release:	5
 Epoch:		0
 License:	BSD
-Group:		Applications/Networking
+Group:		Networking/Utilities
 Source0:	http://www.rtfm.com/ssldump/%{name}-%{version}.tar.gz
 # Source0-md5:	ac8c28fe87508d6bfb06344ec496b1dd
 Patch0: 	%{name}-openssl.patch
