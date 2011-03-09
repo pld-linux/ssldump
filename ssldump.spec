@@ -2,13 +2,13 @@ Summary:	SSLv3/TLS network protocol analyzer
 Summary(pl.UTF-8):	Analizator protokołu sieciowego SSLv3/TLS
 Name:		ssldump
 Version:	0.9b3
-Release:	6
-Epoch:		0
+Release:	7
 License:	BSD
 Group:		Networking/Utilities
 Source0:	http://www.rtfm.com/ssldump/%{name}-%{version}.tar.gz
 # Source0-md5:	ac8c28fe87508d6bfb06344ec496b1dd
 Patch0: 	%{name}-openssl.patch
+Patch1:		aes-support.patch
 URL:		http://www.rtfm.com/ssldump/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -36,6 +36,7 @@ będzie także dekodował połączenia i wyświetlał ruch danych aplikacji.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 sed -i -e 's#libpcap.a#libpcap.so#g' configure*
 sed -i -e 's#net/bpf.h#pcap-bpf.h#g' base/pcap-snoop.c
@@ -46,7 +47,8 @@ cp -f %{_datadir}/automake/config.* .
 %{__autoconf}
 %configure \
 	--with-pcap-inc=%{_includedir} \
-	--with-pcap-lib=%{_libdir}
+	--with-pcap-lib=%{_libdir} \
+	--with-openssl-lib=%{_libdir}
 %{__make}
 
 %install
